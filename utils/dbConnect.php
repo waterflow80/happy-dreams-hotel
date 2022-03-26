@@ -8,10 +8,10 @@
  */
 class DBConnect {
     
-    private static $SERVER_NAME = "localhost";
-    private static $DB_NAME = 'happy_dreams_hotel';
-    private static $USER = 'root';
-    private static $PASWORD = 'ubuntudb';
+    private static $SERVER_NAME = "localhost"; //your local server
+    private static $DB_NAME = 'databse_name';
+    private static $USER = 'root'; //user name
+    private static $PASWORD = 'you_passsword';
     
     public static function getInstance(){
         $connection = new mysqli(DBConnect::$SERVER_NAME,DBConnect::$USER,DBConnect::$PASWORD,DBConnect::$DB_NAME);
