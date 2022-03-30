@@ -1,0 +1,28 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: rgb(62, 63, 139);
+}
+
+.room {
+  text-align: left;
+  /*background-image: url('img_flowers.jpg');*/
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  box-sizing: border-box;
+}
+
+img {
+  border: 1px solid rgb(95, 132, 199);
+  border-radius: 30px;
+  width: 50vw;
+  min-width: 400px;
+}
+
+button {
+  font-size: 20px;
+  padding: 18px;
+}
