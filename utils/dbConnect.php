@@ -9,9 +9,9 @@
 class DBConnect {
     
     private static $SERVER_NAME = "localhost"; //your local server
-    private static $DB_NAME = 'databse_name';
+    private static $DB_NAME = 'db_name';
     private static $USER = 'root'; //user name
-    private static $PASWORD = 'you_passsword';
+    private static $PASWORD = 'your_password';
     
     public static function getInstance(){
         $connection = new mysqli(DBConnect::$SERVER_NAME,DBConnect::$USER,DBConnect::$PASWORD,DBConnect::$DB_NAME);
@@ -19,6 +19,7 @@ class DBConnect {
         // Check connection
         if ($connection -> connect_errno) {
             echo "Failed to connect to MySQL: " . $connection -> connect_error;
+            echo "Error File: utils/dbconnect";
             return null;
             //exit();
         }

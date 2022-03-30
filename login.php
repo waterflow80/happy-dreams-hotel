@@ -33,5 +33,14 @@
         <br>
         <input type="submit" name="login" value="Login">
     </form>
+
+    <h3>Don't have account ?</h3>
+    <a href="./registration.php<?php
+        if (isset($_GET['roomId'])){
+            echo "?roomId=".$_GET['roomId'];
+        }
+    ?>">
+<button>Register</button>
+</a>
 </body>
 </html>
