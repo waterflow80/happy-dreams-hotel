@@ -3,16 +3,16 @@
      * Using Mysql server.
      */
 
-    
 /**Returns a database connection instance
  */
 class DBConnect {
     
     private static $SERVER_NAME = "localhost"; //your local server
-    private static $DB_NAME = 'db_name';
+    private static $DB_NAME = 'happy_dreams_hotel';
     private static $USER = 'root'; //user name
-    private static $PASWORD = 'your_password';
+    private static $PASWORD = 'ubuntudb';
     
+    /**Return an instance of the database myqli object, null if fails */
     public static function getInstance(){
         $connection = new mysqli(DBConnect::$SERVER_NAME,DBConnect::$USER,DBConnect::$PASWORD,DBConnect::$DB_NAME);
         

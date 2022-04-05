@@ -1,8 +1,7 @@
 <?php
-
-require "./utils/checks.php";
-require "./utils/save.php";
-require "./models/clientModel.php";
+require_once ("/var/www/html/hotel/utils/checks.php");
+require_once ("/var/www/html/hotel/utils/save.php");
+require_once ("/var/www/html/hotel/models/clientDAO.php");
 
 /**Handles adding a new user as a client and creating an account for him */
 class RegistrationController {
@@ -52,6 +51,7 @@ class RegistrationController {
 
 
     }
+
 
 }
 

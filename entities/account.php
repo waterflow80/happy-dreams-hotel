@@ -3,11 +3,12 @@
 class Account{
     private $accountId;
     private $email;
+    private $password;
     private $userName;
     private $role;
-    private $password;
+    
 
-    public function __construct($accountId,$email,$userName,$role,$password)
+    public function __construct($accountId,$email,$password,$userName,$role)
     {
         $this->accountId = $accountId;
         $this->email = $email;

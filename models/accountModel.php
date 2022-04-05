@@ -1,7 +1,7 @@
 <?php
+require_once ("/var/www/html/hotel/utils/dbConnect.php");
+require_once ("/var/www/html/hotel/entities/account.php");
 
-require "./utils/dbConnect.php";
-require "./entities/account.php";
 
 class AccountModel{
 
@@ -22,13 +22,26 @@ class AccountModel{
                 return null; // User account does not exist in the database;
             }else {
                 while($row = $result->fetch_assoc()){
-                    return new Account($row['accountId'],$row['email'],$row['userName'], $row['role'], $row['password']);
+                    return new Account($row['accountId'],$row['email'],$row['password'], $row['userName'], $row['role']);
                     break; // returning the first record (which should be the only one)
                 }
                 
             }
         }
         
+    }
+
+    /**Delete the account of the client and all the related data */
+    public static function deleteAccountById($accountId){
+        $connection = DBConnect::getInstance();
+        $sql = "DELETE FROM Account WHERE accountId=" . $accountId;
+        $result = $connection->query($sql);
+        if ($result){
+            return true; // Account and Client deleted successfully !
+        }else {
+            echo "Cannot delete account with id " . $accountId . ". ERROR: " . $connection->error;
+            return false;
+        }
     }
 }
 
