@@ -1,6 +1,6 @@
 
 <?php
-  require "./utils/dbConnect.php";
+  require "/var/www/html/hotel/utils/dbConnect.php";
 
   $connection = DBConnect::getInstance();
 
